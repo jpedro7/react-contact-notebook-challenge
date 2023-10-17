@@ -19,12 +19,22 @@ export default function Contacts() {
     return response.json();
   });
 
+  const handleDeleteContact = () => {
+    // Lógica para deleção aqui
+  };
+
+  const handleEditContact = () => {
+    // Lógica para edição aqui
+  };
+
   if (isFetching) {
     return <Loading />;
   }
+
   if (isError) {
     return <AppError />;
   }
+
   return (
     <div>
       <h1>Contatos</h1>
@@ -35,6 +45,8 @@ export default function Contacts() {
             name={contact.name}
             email={contact.email}
             phone={contact.phone}
+            handleDelete={handleDeleteContact}
+            handleEdit={handleEditContact}
           />
         ))}
       </div>

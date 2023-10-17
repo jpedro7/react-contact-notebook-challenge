@@ -19,6 +19,14 @@ export default function Notebook() {
     return response.json();
   });
 
+  const handleDeleteNote = () => {
+    // Lógica para deleção aqui
+  };
+
+  const handleEditNote = () => {
+    // Lógica para edição aqui
+  };
+
   if (isFetching) {
     return <Loading />;
   }
@@ -36,6 +44,8 @@ export default function Notebook() {
             key={note.id}
             title={note.title}
             description={note.description}
+            handleDelete={handleDeleteNote}
+            handleEdit={handleEditNote}
           />
         ))}
       </div>

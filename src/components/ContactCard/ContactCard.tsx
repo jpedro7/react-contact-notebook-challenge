@@ -7,9 +7,17 @@ type ContactCardInput = {
   name: string;
   email: string;
   phone: string;
+  handleDelete: () => void;
+  handleEdit: () => void;
 };
 
-export default function ContactCard({ name, email, phone }: ContactCardInput) {
+export default function ContactCard({
+  name,
+  email,
+  phone,
+  handleDelete,
+  handleEdit,
+}: ContactCardInput) {
   return (
     <div className="card">
       <img className="card-image" src={AvatarPlaceholder} alt="avatar" />
@@ -21,6 +29,10 @@ export default function ContactCard({ name, email, phone }: ContactCardInput) {
       <div className="card-contact-info">
         <img height="20px" src={EmailIcon} alt="e-mail icon" />
         <p>{email}</p>
+      </div>
+      <div>
+        <button onClick={handleDelete}>Remover</button>
+        <button onClick={handleEdit}>Editar</button>
       </div>
     </div>
   );
