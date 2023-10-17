@@ -1,0 +1,39 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Raphael",
+      "email": "brito@gmail.com",
+      "phone": "+558190836728"
+    },
+    {
+      "id": 2,
+      "name": "Cesar",
+      "email": "cesar@gmail.com",
+      "phone": "+558190836728"
+    },
+    {
+      "id": 3,
+      "name": "cesare",
+      "email": "Cesare@gmail.com",
+      "phone": "+558190836728"
+    }
+  ],
+  "notes": [
+    {
+      "id": 1,
+      "title": "Lembrete",
+      "description": "Colocar presença na aula."
+    },
+    {
+      "id": 2,
+      "title": "React",
+      "description": "Uma das bibliotecas mais utilizadas da atualidade."
+    },
+    {
+      "id": 3,
+      "title": "CESAR",
+      "description": "Centro de Estudos e Sistemas Avançados do Recife."
+    }
+  ]
+}

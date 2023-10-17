@@ -1,13 +1,35 @@
-import ContactCard from "../../components/ContactCard";
+import AppError from "../../components/AppError/Error";
+import ContactCard from "../../components/ContactCard/ContactCard";
+import Loading from "../../components/Loading/Loading";
 import { Contact } from "../../types/Contact";
 import "./Contacts.css";
+import { useQuery } from "react-query";
 
 export default function Contacts() {
+  const {
+    data: contacts,
+    isFetching,
+    isError,
+  } = useQuery("contacts", async () => {
+    const response = await fetch("http://localhost:5000/contacts");
+    if (!response.ok) {
+      throw new Error("Erro ao carregar os dados da lista de contatos");
+    }
+
+    return response.json();
+  });
+
+  if (isFetching) {
+    return <Loading />;
+  }
+  if (isError) {
+    return <AppError />;
+  }
   return (
     <div>
       <h1>Contatos</h1>
       <div className="contacts">
-        {contacts.map((contact) => (
+        {contacts.map((contact: Contact) => (
           <ContactCard
             key={contact.id}
             name={contact.name}
@@ -19,30 +41,3 @@ export default function Contacts() {
     </div>
   );
 }
-
-const contacts: Contact[] = [
-  {
-    id: 1,
-    name: "Raphael",
-    email: "brito@gmail.com",
-    phone: "+558190836728",
-  },
-  {
-    id: 2,
-    name: "Raphael",
-    email: "brito@gmail.com",
-    phone: "+558190836728",
-  },
-  {
-    id: 3,
-    name: "Raphael",
-    email: "brito@gmail.com",
-    phone: "+558190836728",
-  },
-  {
-    id: 4,
-    name: "Raphael",
-    email: "brito@gmail.com",
-    phone: "+558190836728",
-  },
-];

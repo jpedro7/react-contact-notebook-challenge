@@ -6,6 +6,7 @@ import App from "./App.tsx";
 import { QueryClientProvider } from "react-query";
 import { queryClient } from "./services/queryClient.ts";
 import Contacts from "./pages/contacts/Contacts.tsx";
+import Notebook from "./pages/notebook/Notebook.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/contacts",
     element: <Contacts />,
+  },
+  {
+    path: "/notebook",
+    element: <Notebook />,
   },
 ]);
 

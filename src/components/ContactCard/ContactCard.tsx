@@ -1,6 +1,6 @@
-import PhoneIcon from "../../public/icons/phone.png";
-import EmailIcon from "../../public/icons/e-mail.png";
-import AvatarPlaceholder from "../../public/images/avatar.png";
+import PhoneIcon from "../../assets/icons/phone.png";
+import EmailIcon from "../../assets/icons/e-mail.png";
+import AvatarPlaceholder from "../../assets/images/avatar.png";
 import "./ContactCard.css";
 
 type ContactCardInput = {

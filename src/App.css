@@ -5,10 +5,3 @@
   text-align: center;
 }
 
-.contacts {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  row-gap: 20px;
-}
-
-
