@@ -7,6 +7,8 @@ import { QueryClientProvider } from "react-query";
 import { queryClient } from "./services/queryClient.ts";
 import Contacts from "./pages/contacts/Contacts.tsx";
 import Notebook from "./pages/notebook/Notebook.tsx";
+import EditContact from "./pages/editContact/EditContact.tsx";
+import EditNote from "./pages/editNote/EditNote.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +20,16 @@ const router = createBrowserRouter([
     element: <Contacts />,
   },
   {
+    path: "/contacts/:id",
+    element: <EditContact />
+  },
+  {
     path: "/notebook",
     element: <Notebook />,
+  },
+  {
+    path: "/notebook/:id",
+    element: <EditNote />,
   },
 ]);
 

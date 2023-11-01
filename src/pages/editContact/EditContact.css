@@ -1,0 +1,17 @@
+.edit-contact-container {
+    width: 250px;
+    margin: 0 auto;
+    text-align: start;
+}
+
+.edit-contact-container > div {
+    margin-bottom: 10px;
+}
+
+.edit-contact-container > div > input {
+    width: 100%;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
